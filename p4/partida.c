@@ -117,11 +117,14 @@ int main()
     } while(sigue_j || sigue_c);
 
     /* Resultado de la partida */
-    if((pts_j <= 15) && ((pts_j > pts_c) || (pts_c > 15)))
-	printf("\nEnhorabuena Jugador: has ganado la partida !!!\n");
-    else
-	printf("\nJugador: otra vez sera...\n");
-
+    if((pts_j <= 15) && ((pts_j > pts_c) || (pts_c > 15))) {
+	printf("\n\033[36mEnhorabuena Jugador: has ganado la partida !!!\n\033[0m");
+	exit(0);
+    }
+    else{
+	printf("\n\033[31mJugador: otra vez sera...\n\033[0m");
+	exit(1);
+    }
     exit(0);
 }
 
@@ -138,11 +141,11 @@ void barajar(carta baraja[CARTAS])
 {
   int veces,i,c1,c2;
 
-  srand(getpid());
-  veces=rand() % 100;
+  srand(getpid()); //Establecemos la semilla del Random. Dicha semilla es el valor del PID de nuestro programa
+  veces=rand() % 100; //Nos devuelve un numero aleatorio entre 0 y 99
   for (i=0; i<veces; i++) {
-      c1=rand() % CARTAS;
-      c2=rand() % CARTAS;
+      c1=rand() % CARTAS; //Nos devuelve un numero aleatorio entre 0 y CARTAS-1
+      c2=rand() % CARTAS; //Nos devuelve un numero aleatorio entre 0 y CARTAS-1
       intercambiar( &(baraja[c1]), &(baraja[c2]) );
   }
 }
