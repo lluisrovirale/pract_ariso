@@ -3,6 +3,10 @@ pract_ariso
 
 Practiques de l'assignatura d'ARISO 2 de la ETSETB UPC // Practices of the subject ARISO 2 in the ETSETB(UPC)
 
+Exercici Repas // 
+===========
+Exercicis fets a AESS per repasar el dia 2/06/2014.
+
 Examen Parcial // 
 ===========
 Resposta de l'exercici 1 de l'examen parcial fet a l'ETSETB el dia 15/05/2014 de 16 a 18.
